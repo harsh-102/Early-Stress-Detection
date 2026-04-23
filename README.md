@@ -4,39 +4,6 @@ Early Stress Detection in Agriculture using RGB and multispectral imagery
 
 This study addresses the critical challenge of early non-disease crop stress identification through a deep learning framework optimized for multispectral aerial imagery. Utilizing the Agriculture-Vision dataset, we propose a pipeline that categorizes field conditions into Healthy, Early Stress, and Severe Stress based on area-ratio thresholding and the presence of catastrophic planter skips. Our methodology employs a 6-channel input tensor-comprising RGB, Near-Infrared (NIR), and two derived vegetation indices (NDVI and GNDVI)-processed via a Late Fusion. We compare two distinct methodologies: a high-capacity architecture utilizing ImageNet-pretrained ResNet-18 backbones and a custom-designed dual-branch CNN. Our findings indicate that the ResNet-18 model achieves a superior overall accuracy of 68.74% and a Macro F1-score of 0.6696,though it exhibits a substantial ~21% generalization gap (92% training vs. 71% validation accuracy). In contrast, the custom CNN, while reaching a lower accuracy of 61.33%, demonstrates improved generalization with a narrower accuracy gap (75% training vs. 65% validation). This study highlights the trade-off between the superior feature extraction of transfer-learning-based models and the architectural simplicity required to mitigate overfitting in complex agricultural scene analysis.. While the architecture demonstrates high discriminative power for Healthy and Severe Stress classes, our analysis highlights the inherent complexity of the Early Stress transitional phase.
 
-<!-- iv -->
-
-# TABLE OF CONTENTS
-
-# Declaration by the student
-
-·1
-
-Project Completion Certificate.................................................ii
-
-Acknowledgement...........................................................iii
-
-Abstract....................................................................iv
-
-List of figures...............................................................vi
-
-List of tables................................................................vii
-
-1. Introduction..........................................................1
-
-2. Dataset Analysis and Preprocessing.......................................2
-
-3. Methodology.........................................................4
-
-4. Experimental Setup....................................................8
-
-5. Results and Discussion.................................................9
-
-6. Conclusion and Future Work.............................................12
-
-Bibliography................................................................14
-
-<!-- V -->
 
 **LIST OF FIGURES**
 
@@ -100,7 +67,7 @@ Table 1: Dataset Distribution and Label Instance Statistics
 
 *Note: Waterway is classified as an EXCLUDEDLABEL in our pipeline as it represents a structural farm feature rather than an environmental stressor. Furthermore, the labels doubleplant, drydown, endrow, and stormdamage were ignored due to zero instances in the source dataset.
 
-## 2.2 Area-Based Stress LLabelling Logic
+## 2.2 Area-Based Stress Labelling Logic
 
 To convert semantic masks into categorical labels, we developed a logic based on the spatial extent of stress relative to the valid field area:
 
@@ -399,7 +366,7 @@ The long-term vision for this research extends beyond isolated image classificat
 
 <!-- 13 -->
 
-<!-- **Bibliography** -->
+## Bibliography
 
 1. Seralathan, P., Edward, A.S. Reinforcement learning based dynamic vegetation index formulation for rice crop stress detection using satellite and mobile imagery.Sci Rep 16,3447(2026).https://doi.org/10.1038/s41598-025-33386-9
 
