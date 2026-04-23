@@ -1,0 +1,4 @@
+data2019_miniscale/
+.venv/
+.mypy_cache/
+src_cnn_txt/
