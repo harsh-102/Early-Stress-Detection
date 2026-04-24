@@ -1,4 +1,35 @@
+# Data
 data2019_miniscale/
+
+# Virtual environment
 .venv/
+
+# Cache
 .mypy_cache/
+__pycache__/
+*.pyc
+
+# Generated outputs
+outputs_cnn/
 src_cnn_txt/
+
+# ML models (large files)
+models/
+*.h5
+*.pkl
+*.pt
+*.pth
+*.joblib
+*.ckpt
+
+# Jupyter
+*.ipynb
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
